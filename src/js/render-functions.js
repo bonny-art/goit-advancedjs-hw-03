@@ -1,4 +1,5 @@
 import { refs } from './refs';
+import { lightbox } from './simlpeLightbox';
 
 export const renderGallery = images => {
   const itemMarkup = ({
@@ -11,7 +12,7 @@ export const renderGallery = images => {
     downloads,
   }) => `
       <li class="card card-set-item">
-            <a href="${largeImageURL}" class="gallety-link" href="#">
+            <a href="${largeImageURL}" class="gallery-link" href="#">
               <div class="photo-box">
                 <img
                   src="${webformatURL}"
@@ -33,4 +34,6 @@ export const renderGallery = images => {
   const galleryMarkup = images.map(image => itemMarkup(image)).join('');
 
   refs.gallery.innerHTML = galleryMarkup;
+
+  lightbox.refresh();
 };
