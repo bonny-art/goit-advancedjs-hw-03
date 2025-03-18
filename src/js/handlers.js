@@ -2,6 +2,7 @@ import { refs } from './refs';
 
 import { iziToast } from './config/iziToast';
 import 'izitoast/dist/css/iziToast.min.css';
+
 import { getImages } from './pixabay-api';
 import { renderGallery } from './render-functions';
 
