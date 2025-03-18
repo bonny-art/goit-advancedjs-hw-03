@@ -12,5 +12,6 @@
 /* Pages style */
 @import url('./index.css');
 
-/* Loader */
+/* Utils */
 @import url('./loader.css');
+@import url('./izi-toast.css');
