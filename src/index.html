@@ -25,114 +25,21 @@
   <body>
     <section class="section">
       <div class="container photos-container">
-        <div class="input-box">
+        <form class="form">
           <input
-            class="input-fieled js-input"
+            class="input-field js-input"
             placeholder="Search images..."
             type="text"
+            name="search"
           />
-          <button class="input-button js-button" type="button">Start</button>
-        </div>
+          <button class="input-button js-button" type="submit">Start</button>
+        </form>
 
-        <ul class="content-box card-set js-gallery">
-          <li class="card card-set-item">
-            <a href="" class="gallety-link" href="#">
-              <div class="photo-box">
-                <img
-                  src="./img/2019-10-03 15-17-56-2.jpg"
-                  alt="Me"
-                  class="photo"
-                />
-              </div>
-              <div class="capture">
-                <div class="item"><span class="accent">Likes</span>1813</div>
-                <div class="item"><span class="accent">Views</span>900290</div>
-                <div class="item"><span class="accent">Comments</span>229</div>
-                <div class="item">
-                  <span class="accent">Downloads</span>610937
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="card card-set-item">
-            <a href="" class="gallety-link" href="#">
-              <div class="photo-box">
-                <img
-                  src="./img/2019-10-03 15-17-56-2.jpg"
-                  alt="Me"
-                  class="photo"
-                />
-              </div>
-              <div class="capture">
-                <div class="item"><span class="accent">Likes</span>1813</div>
-                <div class="item"><span class="accent">Views</span>900290</div>
-                <div class="item"><span class="accent">Comments</span>229</div>
-                <div class="item">
-                  <span class="accent">Downloads</span>610937
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="card card-set-item">
-            <a href="" class="gallety-link" href="#">
-              <div class="photo-box">
-                <img
-                  src="./img/2019-10-03 15-17-56-2.jpg"
-                  alt="Me"
-                  class="photo"
-                />
-              </div>
-              <div class="capture">
-                <div class="item"><span class="accent">Likes</span>1813</div>
-                <div class="item"><span class="accent">Views</span>900290</div>
-                <div class="item"><span class="accent">Comments</span>229</div>
-                <div class="item">
-                  <span class="accent">Downloads</span>610937
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="card card-set-item">
-            <a href="" class="gallety-link" href="#">
-              <div class="photo-box">
-                <img
-                  src="./img/2019-10-03 15-17-56-2.jpg"
-                  alt="Me"
-                  class="photo"
-                />
-              </div>
-              <div class="capture">
-                <div class="item"><span class="accent">Likes</span>1813</div>
-                <div class="item"><span class="accent">Views</span>900290</div>
-                <div class="item"><span class="accent">Comments</span>229</div>
-                <div class="item">
-                  <span class="accent">Downloads</span>610937
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="card card-set-item">
-            <a href="" class="gallety-link" href="#">
-              <div class="photo-box">
-                <img
-                  src="./img/2019-10-03 15-17-56-2.jpg"
-                  alt="Me"
-                  class="photo"
-                />
-              </div>
-              <div class="capture">
-                <div class="item"><span class="accent">Likes</span>1813</div>
-                <div class="item"><span class="accent">Views</span>900290</div>
-                <div class="item"><span class="accent">Comments</span>229</div>
-                <div class="item">
-                  <span class="accent">Downloads</span>610937
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <ul class="content-box card-set js-gallery"></ul>
 
-        <p class="loader js-loader">Loading images, please wait...</p>
+        <p class="loader js-loader visually-hidden">
+          Loading images, please wait...
+        </p>
       </div>
     </section>
 

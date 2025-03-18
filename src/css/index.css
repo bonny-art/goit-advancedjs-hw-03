@@ -5,13 +5,13 @@
   gap: 32px;
 }
 
-.input-box {
+.form {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
 
-.input-fieled {
+.input-field {
   width: 272px;
   height: 40px;
 
@@ -34,6 +34,8 @@
 }
 
 .input-button {
+  width: 91px;
+  height: 40px;
   padding: 8px 16px;
   justify-content: center;
   align-items: center;

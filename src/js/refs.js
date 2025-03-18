@@ -1,5 +1,5 @@
 export const refs = {
-  input: document.querySelector('.js-input'),
-  button: document.querySelector('.js-button'),
+  form: document.querySelector('.form'),
   gallery: document.querySelector('.js-gallery'),
+  loader: document.querySelector('.js-loader'),
 };

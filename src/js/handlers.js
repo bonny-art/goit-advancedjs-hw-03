@@ -3,6 +3,7 @@ import { refs } from './refs';
 import { iziToast } from './config/iziToast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { getImages } from './pixabay-api';
+import { renderGallery } from './render-functions';
 
 const iziToastOptions = {
   message: 'Sorry, something went wrong.',
@@ -18,20 +19,24 @@ const iziToastOptions = {
 };
 
 export const handleImagesSearch = e => {
-  const query = refs.input.value.trim();
+  e.preventDefault();
+  const input = refs.form.elements.search;
+
+  const query = input.value.trim();
 
   if (query === '') {
     iziToast.show({
       ...iziToastOptions,
-      message: 'Please, print something for saerch',
+      message: 'Oops! Looks like you forgot to enter something.',
     });
-    refs.input.value = '';
+    input.value = '';
     return;
   }
 
+  refs.loader.classList.remove('visually-hidden');
+
   getImages(query)
     .then(data => {
-      console.log('🚀 ~ data:', data);
       if (data.hits.length === 0) {
         iziToast.show({
           ...iziToastOptions,
@@ -39,12 +44,17 @@ export const handleImagesSearch = e => {
         });
       }
 
-      refs.input.value = '';
+      renderGallery(data.hits);
+
+      input.value = '';
     })
     .catch(err =>
       iziToast.show({
         ...iziToastOptions,
         message: `Sorry, something went wrong.: ${err}`,
       })
-    );
+    )
+    .finally(() => {
+      refs.loader.classList.add('visually-hidden');
+    });
 };
