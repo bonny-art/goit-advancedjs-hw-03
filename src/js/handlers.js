@@ -5,12 +5,16 @@ import 'izitoast/dist/css/iziToast.min.css';
 import { getImages } from './pixabay-api';
 import { renderGallery } from './render-functions';
 
+const isLocalhost =
+  window.location.origin.includes('localhost') ||
+  window.location.origin.includes('127.0.0.1');
+
 const iziToastOptions = {
   message: 'Sorry, something went wrong.',
 
-  // TODO: Change before deploy
-  //   iconUrl: '/goit-advancedjs-hw-03/img/illegal.svg',
-  iconUrl: './public/img/illegal.svg',
+  iconUrl: isLocalhost
+    ? './public/img/illegal.svg'
+    : '/goit-advancedjs-hw-03/img/illegal.svg',
 
   progressBarColor: '#B51B1B',
   backgroundColor: '#EF4040',
@@ -34,6 +38,7 @@ export const handleImagesSearch = e => {
   }
 
   refs.loader.classList.remove('visually-hidden');
+  input.value = '';
 
   getImages(query)
     .then(data => {
@@ -45,8 +50,6 @@ export const handleImagesSearch = e => {
       }
 
       renderGallery(data.hits);
-
-      input.value = '';
     })
     .catch(err =>
       iziToast.show({

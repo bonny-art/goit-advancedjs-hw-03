@@ -11,3 +11,6 @@
 
 /* Pages style */
 @import url('./index.css');
+
+/* Loader */
+@import url('./loader.css');
