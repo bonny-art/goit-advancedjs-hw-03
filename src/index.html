@@ -5,18 +5,136 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Normalizer -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <section class="section">
+      <div class="container photos-container">
+        <div class="input-box">
+          <input
+            class="input-fieled js-input"
+            placeholder="Search images..."
+            type="text"
+          />
+          <button class="input-button js-button" type="button">Start</button>
+        </div>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+        <ul class="content-box card-set js-gallery">
+          <li class="card card-set-item">
+            <a href="" class="gallety-link" href="#">
+              <div class="photo-box">
+                <img
+                  src="./img/2019-10-03 15-17-56-2.jpg"
+                  alt="Me"
+                  class="photo"
+                />
+              </div>
+              <div class="capture">
+                <div class="item"><span class="accent">Likes</span>1813</div>
+                <div class="item"><span class="accent">Views</span>900290</div>
+                <div class="item"><span class="accent">Comments</span>229</div>
+                <div class="item">
+                  <span class="accent">Downloads</span>610937
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-set-item">
+            <a href="" class="gallety-link" href="#">
+              <div class="photo-box">
+                <img
+                  src="./img/2019-10-03 15-17-56-2.jpg"
+                  alt="Me"
+                  class="photo"
+                />
+              </div>
+              <div class="capture">
+                <div class="item"><span class="accent">Likes</span>1813</div>
+                <div class="item"><span class="accent">Views</span>900290</div>
+                <div class="item"><span class="accent">Comments</span>229</div>
+                <div class="item">
+                  <span class="accent">Downloads</span>610937
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-set-item">
+            <a href="" class="gallety-link" href="#">
+              <div class="photo-box">
+                <img
+                  src="./img/2019-10-03 15-17-56-2.jpg"
+                  alt="Me"
+                  class="photo"
+                />
+              </div>
+              <div class="capture">
+                <div class="item"><span class="accent">Likes</span>1813</div>
+                <div class="item"><span class="accent">Views</span>900290</div>
+                <div class="item"><span class="accent">Comments</span>229</div>
+                <div class="item">
+                  <span class="accent">Downloads</span>610937
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-set-item">
+            <a href="" class="gallety-link" href="#">
+              <div class="photo-box">
+                <img
+                  src="./img/2019-10-03 15-17-56-2.jpg"
+                  alt="Me"
+                  class="photo"
+                />
+              </div>
+              <div class="capture">
+                <div class="item"><span class="accent">Likes</span>1813</div>
+                <div class="item"><span class="accent">Views</span>900290</div>
+                <div class="item"><span class="accent">Comments</span>229</div>
+                <div class="item">
+                  <span class="accent">Downloads</span>610937
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card card-set-item">
+            <a href="" class="gallety-link" href="#">
+              <div class="photo-box">
+                <img
+                  src="./img/2019-10-03 15-17-56-2.jpg"
+                  alt="Me"
+                  class="photo"
+                />
+              </div>
+              <div class="capture">
+                <div class="item"><span class="accent">Likes</span>1813</div>
+                <div class="item"><span class="accent">Views</span>900290</div>
+                <div class="item"><span class="accent">Comments</span>229</div>
+                <div class="item">
+                  <span class="accent">Downloads</span>610937
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
 
-    <load src="./partials/footer.html" />
+        <p class="loader js-loader">Loading images, please wait...</p>
+      </div>
+    </section>
 
     <script type="module" src="./main.js"></script>
   </body>
